@@ -1,0 +1,302 @@
+/* Estilização Global */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Exo 2", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 1.5rem;
+    font-style: normal;
+}
+body{
+    background-color: #141414;
+    height: 100vh;
+}
+.container{
+    max-width: 1280px;
+    margin: 0 auto;
+}
+.flex{
+    display: flex;
+}
+
+/* Botão de Orçamento da página inicial */
+.bt-contato button{
+    padding: 10px 50px;
+    margin: 60px 100px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: aqua;
+    border: 0;
+    border-radius: 30px;
+}
+button:hover, form .bt-enviar input:hover{
+    box-shadow: 0px 0px 8px aquamarine;
+    transform:scale(1.02);
+    transition: 0.2s;
+}
+
+/* Títulos das páginas na landing page */
+h2.titulo{
+    color: white;
+    font-size: 38px;
+    text-align: center;
+    margin-top: 70px;
+}
+h2.titulo span{
+    color: aqua;
+}
+
+/* Estilização do menu superior */
+header{
+    padding: 20px 4%;
+}
+header > .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    cursor: pointer;
+}
+header a{
+    color: #7d7d7d;
+    text-decoration: none;
+    display: inline-block;
+}
+header a:hover{
+    color: aqua;
+    transform: scale(1.1);
+    transition: 0.2;
+}
+header nav ul{
+    list-style-type: none;
+}
+header nav ul li{
+    display: inline-block;
+    padding: 25px 40px 0;
+}
+.nome-logo{
+    padding-inline-start: 1.1rem;
+    font-size: 35px;
+    color: aliceblue;
+    display: inline-block;
+}
+
+/* Estilização do feed inicial do Site */
+.inicio-site{
+    padding: 40px 4%;
+    margin-top: 8%;
+}
+section.inicio-site .flex{
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+}
+.pub-img img{
+    width: 500px;
+    border-radius: 50%;
+    position: relative;
+    animation: flutuar 2s ease-in-out infinite alternate;
+}
+
+/* Animação da imagem inicial do site */
+@keyframes flutuar{
+    0%{
+        top: 0;
+        left: 30px;
+    }
+    100%{
+        top: 30px;
+        left: 0;
+    }
+}
+.inicio-site h1{
+    color: #fff;
+    font-size: 44px;
+    line-height: 10px;
+}
+.inicio-site .pub-txt h1 span{
+    color: aqua;
+    font-size: 150px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.inicio-site .pub-txt p{
+    color: #fff;
+    font-size: 30px;
+    margin: 35px 180px;
+} 
+
+/* Estilização da Página Sobre Mim */
+section.sobre{
+    padding: 120px 4%;
+}
+.sobre .txt-sobre{
+    color: #fff;
+}
+section.sobre .flex{
+    align-items: center;
+    gap: 60px;
+}
+.sobre .txt-sobre h2{
+    font-size: 38px;
+    line-height: 40px;
+    margin-bottom: 30px;
+}
+.sobre .txt-sobre h2 span{
+    color: aqua;
+    display: block;
+}
+.sobre .txt-sobre p{
+    margin: 30px 0;
+    text-align: justify;
+}
+.bt-social button{
+    background-color: #141414;
+    border: none;
+    cursor: pointer;
+    margin: 0 15px;
+    border-radius: 50%;
+}
+.sobre .txt-sobre .bt-social button img{
+    width: 60px;
+    height: 60px;
+    transition: .2s;
+}
+.sobre .img-sobre img{
+    width: 700px;
+    border-radius: 45px;
+}
+
+/* Estilização da Página de Skills */
+section.formacao{
+    padding: 120px 4%;
+}
+section.formacao .flex{
+    gap: 60px;
+}
+.formacao .skills{
+    color: #fff;
+    padding: 40px;
+    border-radius: 35px;
+    margin-top: 60px;
+    transition: 0.4s;
+}
+.formacao .skills:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 8px aqua;
+}
+.formacao .skills img{
+    width: 140px;
+}
+.formacao .skills h3{
+    font-size: 28px;
+    margin: 15px 0;
+}
+
+/* Estilização da Pagina dos Meus Projetos */
+section.projetos{
+    padding: 120px 4%;
+}
+section.projetos .flex{
+    justify-content: space-around;
+    margin-top: 60px;
+}
+.img-port{
+    width: 300px;
+    height: 460px;
+    background-color: aqua;
+    background-size: cover;
+    background-position: 100% 0%;
+    transition: 3s;
+    border-radius: 45px;
+    cursor: pointer;
+}
+.img-port:hover{
+    background-position: 100% 100%;
+}
+.img-port a{
+    text-decoration: none;
+    color: #141414;
+}
+.img-port a > div:hover{
+    color: white;
+}
+.overlay{
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,255,255,.5);
+    border-radius: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 800;
+    color: #141414;
+    opacity: 0;
+    transition: 0.5s;
+}
+.overlay:hover{
+    opacity: 1;
+}
+
+/* Estilização da Página de Formulario de Contato */
+section.formulario{
+    padding: 80px 4%;
+}
+form{
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 45px;
+}
+form input, form textarea{
+    width: 100%;
+    background-color: #202020;
+    border: 0;
+    outline: 0;
+    padding: 20px 15px;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 15px;
+}
+form textarea{
+    resize: none;
+    height: 200px;
+}
+form .bt-enviar{
+    margin-top: 20px;
+    text-align: center;
+}
+form .bt-enviar input{
+    width: 200px;
+    background-color: aqua;
+    color: #000;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+/* Estilização do rodapé */
+footer{
+    padding: 35px 4%;
+    box-shadow: 0 0 10px 0.2px #fff;
+}
+footer .flex{
+    justify-content: space-between;
+}
+.line-footer{
+    padding: 2px 0;
+}
+.borda{
+    border-top: 2px solid aqua;
+}
+footer .line-footer p{
+    color: #fff;
+    font-size: 18px;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px 0px;
+}
